@@ -1,0 +1,1274 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0c0b0a;
+    color: #f5f0e8;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 28px 7%;
+
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #d4af37;
+    font-family: "Cormorant Garamond", serif;
+}
+
+.logo span {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.logo small {
+    font-family: "Montserrat", sans-serif;
+    font-size: 8px;
+    letter-spacing: 7px;
+    margin-left: 7px;
+    color: #eee4cf;
+}
+
+.header nav {
+    display: flex;
+    gap: 35px;
+}
+
+.header nav a {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #e8e1d4;
+    transition: 0.3s;
+}
+
+.header nav a:hover {
+    color: #d4af37;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(7, 6, 5, 0.68),
+            rgba(7, 6, 5, 0.94)
+        ),
+        url("img/fondo-perfumes.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    background: rgba(212, 175, 55, 0.07);
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+
+    padding: 40px 20px;
+}
+
+.hero-mini {
+    color: #d4af37;
+    font-size: 12px;
+    letter-spacing: 6px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(65px, 10vw, 130px);
+    line-height: 0.82;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #d4af37;
+    font-style: italic;
+}
+
+.line {
+    width: 100px;
+    height: 1px;
+
+    background: #d4af37;
+
+    margin: 45px auto 30px;
+}
+
+.hero-frase {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-style: italic;
+    color: #e7dfd0;
+}
+
+.hero-frase strong {
+    color: #d4af37;
+}
+
+.hero-text {
+    max-width: 620px;
+    margin: 20px auto 35px;
+
+    font-size: 13px;
+    line-height: 2;
+
+    color: #bdb6aa;
+}
+
+.btn-principal {
+    display: inline-block;
+
+    padding: 17px 35px;
+
+    border: 1px solid #d4af37;
+
+    color: #d4af37;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    transition: 0.4s;
+}
+
+.btn-principal:hover {
+    background: #d4af37;
+    color: #0c0b0a;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   BENEFICIOS
+========================================= */
+
+.beneficios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid #24211c;
+    border-bottom: 1px solid #24211c;
+}
+
+.beneficio {
+    padding: 45px 20px;
+
+    text-align: center;
+
+    border-right: 1px solid #24211c;
+}
+
+.beneficio:last-child {
+    border-right: none;
+}
+
+.beneficio span {
+    color: #d4af37;
+    font-size: 25px;
+}
+
+.beneficio h3 {
+    margin: 12px 0 7px;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.beneficio p {
+    font-size: 10px;
+    color: #77736c;
+}
+
+
+/* =========================================
+   FRASES
+========================================= */
+
+.frase-seccion {
+    padding: 120px 20px;
+
+    text-align: center;
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.etiqueta {
+    color: #d4af37;
+
+    font-size: 10px;
+    letter-spacing: 5px;
+
+    margin-bottom: 25px;
+}
+
+.frase-seccion h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(38px, 5vw, 65px);
+
+    line-height: 1.05;
+
+    font-weight: 500;
+}
+
+.frase-seccion h2 span {
+    color: #d4af37;
+    font-style: italic;
+}
+
+.frase-seccion > p:last-child {
+    margin-top: 30px;
+
+    color: #858078;
+
+    font-size: 13px;
+    line-height: 2;
+}
+
+
+/* =========================================
+   CATÁLOGO
+========================================= */
+
+.catalogo {
+    padding: 100px 6%;
+    background: #11100e;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.titulo-seccion > p:first-child {
+    color: #d4af37;
+
+    font-size: 9px;
+    letter-spacing: 5px;
+}
+
+.titulo-seccion h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 65px;
+
+    font-weight: 500;
+
+    margin-top: 15px;
+}
+
+.titulo-seccion h2 span {
+    color: #d4af37;
+    font-style: italic;
+}
+
+.separador {
+    width: 60px;
+    height: 1px;
+
+    background: #d4af37;
+
+    margin: 25px auto;
+}
+
+.subtitulo {
+    color: #77736c;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   PRODUCTOS
+========================================= */
+
+.productos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 45px 25px;
+
+    max-width: 1300px;
+
+    margin: auto;
+}
+
+.producto {
+    text-align: center;
+}
+
+
+/* =========================================
+   TARJETA 3D
+========================================= */
+
+.flip-card {
+    width: 100%;
+    height: 430px;
+
+    perspective: 1200px;
+
+    cursor: pointer;
+}
+
+.flip-inner {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.9s cubic-bezier(.2,.7,.2,1);
+
+    transform-style: preserve-3d;
+}
+
+
+/*
+   AQUÍ OCURRE EL GIRO DE 180°
+*/
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+
+/* CARA DELANTERA Y TRASERA */
+
+.flip-front,
+.flip-back {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   FRENTE
+========================================= */
+
+.flip-front {
+    background: #181612;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #2c281f;
+}
+
+.flip-front::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 15px;
+
+    border: 1px solid rgba(212, 175, 55, 0.18);
+
+    pointer-events: none;
+}
+
+.flip-front img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 30px;
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.8s ease;
+}
+
+
+/*
+   La imagen se desvanece ligeramente
+   cuando comienza el giro.
+*/
+
+.flip-card:hover .flip-front img {
+    opacity: 0.25;
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   ETIQUETAS
+========================================= */
+
+.badge {
+    position: absolute;
+
+    top: 20px;
+    left: 20px;
+
+    z-index: 5;
+
+    padding: 8px 12px;
+
+    background: #d4af37;
+
+    color: #0c0b0a;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   PARTE TRASERA
+========================================= */
+
+.flip-back {
+    transform: rotateY(180deg);
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(212, 175, 55, 0.13),
+            transparent 65%
+        ),
+        #14120f;
+
+    border: 1px solid #4b3c20;
+
+    padding: 55px 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.flip-back::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 15px;
+
+    border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.back-icon {
+    font-size: 35px;
+    color: #d4af37;
+
+    margin-bottom: 15px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.flip-back h3 {
+    position: relative;
+    z-index: 2;
+
+    font-family: "Cormorant Garamond", serif;
+
+    color: #d4af37;
+
+    font-size: 34px;
+
+    font-weight: 500;
+}
+
+.flip-back p {
+    position: relative;
+    z-index: 2;
+
+    color: #b4ada2;
+
+    font-size: 11px;
+
+    line-height: 1.9;
+
+    max-width: 280px;
+
+    margin: 15px 0 25px;
+}
+
+.caracteristicas {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 7px;
+}
+
+.caracteristicas span {
+    border: 1px solid #594a29;
+
+    color: #d4af37;
+
+    padding: 7px 10px;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   INFORMACIÓN PRODUCTO
+========================================= */
+
+.producto-info {
+    padding: 25px 10px;
+}
+
+.producto-info h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 29px;
+
+    font-weight: 500;
+}
+
+.producto-info p {
+    color: #77736c;
+
+    font-size: 10px;
+
+    margin: 5px 0 10px;
+}
+
+.producto-info strong {
+    display: block;
+
+    color: #d4af37;
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   BOTÓN WHATSAPP
+========================================= */
+
+.btn-whatsapp {
+    display: inline-block;
+
+    padding: 11px 16px;
+
+    border: 1px solid #343028;
+
+    color: #bdb6aa;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+    border-color: #d4af37;
+
+    color: #d4af37;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   LATTAFA
+========================================= */
+
+.especial {
+    padding: 110px 6%;
+
+    background: #0c0b0a;
+}
+
+.lattafa-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.lattafa-card {
+    background: #15130f;
+
+    border: 1px solid #29251e;
+
+    padding: 20px;
+
+    transition: 0.4s;
+}
+
+.lattafa-card:hover {
+    border-color: #806b31;
+
+    transform: translateY(-7px);
+}
+
+.lattafa-card img {
+    height: 330px;
+
+    object-fit: contain;
+
+    background: #11100d;
+
+    margin-bottom: 25px;
+}
+
+.lattafa-card h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 30px;
+
+    font-weight: 500;
+}
+
+.lattafa-card p {
+    color: #77736c;
+
+    font-size: 10px;
+
+    margin: 5px 0;
+}
+
+.lattafa-card strong {
+    display: block;
+
+    color: #d4af37;
+
+    font-size: 20px;
+
+    margin: 10px 0 15px;
+}
+
+.lattafa-card a {
+    display: inline-block;
+
+    border: 1px solid #3b3427;
+
+    padding: 10px 15px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   SPRAYS
+========================================= */
+
+.sprays {
+    padding: 110px 6%;
+
+    background: #11100e;
+}
+
+.spray-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.spray-card {
+    text-align: center;
+
+    background: #171510;
+
+    padding: 25px;
+
+    border: 1px solid #29251e;
+
+    transition: 0.4s;
+}
+
+.spray-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #806b31;
+}
+
+.spray-card img {
+    height: 280px;
+
+    object-fit: contain;
+
+    margin-bottom: 20px;
+}
+
+.spray-card h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 27px;
+
+    font-weight: 500;
+}
+
+.spray-card p {
+    color: #77736c;
+
+    font-size: 10px;
+
+    margin: 5px;
+}
+
+.spray-card strong {
+    display: block;
+
+    color: #d4af37;
+
+    font-size: 20px;
+
+    margin: 12px;
+}
+
+.spray-card a {
+    display: inline-block;
+
+    border: 1px solid #403827;
+
+    padding: 10px 15px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.spray-card a:hover {
+    border-color: #d4af37;
+
+    color: #d4af37;
+}
+
+
+/* =========================================
+   ENVÍOS
+========================================= */
+
+.envios {
+    padding: 120px 6%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(8, 7, 6, 0.9),
+            rgba(8, 7, 6, 0.9)
+        ),
+        url("img/fondo-envios.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.envios-content {
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+.envios h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 60px;
+
+    font-weight: 500;
+}
+
+.envios h2 span {
+    color: #d4af37;
+
+    font-style: italic;
+}
+
+.envios-content > p:not(.etiqueta) {
+    color: #88837b;
+
+    font-size: 12px;
+
+    line-height: 2;
+
+    max-width: 600px;
+
+    margin: 20px auto 50px;
+}
+
+.envio-opciones {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.envio-box {
+    padding: 35px 20px;
+
+    border: 1px solid #302a20;
+
+    background: rgba(20, 18, 14, 0.8);
+
+    transition: 0.3s;
+}
+
+.envio-box:hover {
+    border-color: #806b31;
+}
+
+.envio-box span {
+    font-size: 30px;
+}
+
+.envio-box h3 {
+    color: #d4af37;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin: 15px 0 10px;
+}
+
+.envio-box p {
+    color: #77736c;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   FRASE FINAL
+========================================= */
+
+.frase-final {
+    padding: 140px 20px;
+
+    text-align: center;
+
+    background: #0a0908;
+}
+
+.frase-final span {
+    color: #d4af37;
+
+    font-size: 25px;
+}
+
+.frase-final h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(50px, 7vw, 85px);
+
+    line-height: 0.95;
+
+    font-weight: 500;
+
+    margin: 25px 0;
+}
+
+.frase-final h2::first-line {
+    color: #d4af37;
+}
+
+.frase-final p {
+    color: #77736c;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   CONTACTO
+========================================= */
+
+.contacto {
+    padding: 120px 20px;
+
+    text-align: center;
+
+    background: #11100e;
+}
+
+.contacto-content {
+    max-width: 750px;
+
+    margin: auto;
+}
+
+.contacto h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 60px;
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+.contacto h2 span {
+    display: block;
+
+    color: #d4af37;
+
+    font-style: italic;
+}
+
+.contacto-content > p:not(.etiqueta):not(.numero) {
+    color: #77736c;
+
+    font-size: 12px;
+
+    margin: 25px 0 35px;
+}
+
+.numero {
+    color: #d4af37;
+
+    margin-top: 25px;
+
+    letter-spacing: 2px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 50px 20px;
+
+    text-align: center;
+
+    background: #080807;
+}
+
+.footer-logo {
+    color: #d4af37;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 35px;
+
+    letter-spacing: 5px;
+}
+
+footer > p {
+    color: #625f58;
+
+    font-size: 9px;
+
+    margin-top: 10px;
+}
+
+.footer-line {
+    width: 60px;
+
+    height: 1px;
+
+    background: #3a3222;
+
+    margin: 25px auto;
+}
+
+.copyright {
+    font-size: 8px !important;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 20px 5%;
+    }
+
+    .header nav {
+        gap: 15px;
+    }
+
+    .header nav a {
+        font-size: 8px;
+    }
+
+    .beneficios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .beneficio:nth-child(2) {
+        border-right: none;
+    }
+
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lattafa-grid,
+    .spray-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        position: relative;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        background: #0c0b0a;
+    }
+
+    .header nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px 18px;
+    }
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .hero-frase {
+        font-size: 25px;
+    }
+
+    .beneficios {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .beneficio {
+        padding: 30px 10px;
+    }
+
+    .frase-seccion {
+        padding: 80px 20px;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 48px;
+    }
+
+    .catalogo,
+    .especial,
+    .sprays {
+        padding: 80px 5%;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .flip-card {
+        height: 420px;
+    }
+
+    .lattafa-grid,
+    .spray-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lattafa-card img {
+        height: 350px;
+    }
+
+    .spray-card img {
+        height: 300px;
+    }
+
+    .envios h2 {
+        font-size: 48px;
+    }
+
+    .envio-opciones {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto h2 {
+        font-size: 48px;
+    }
+
+}
+
+
+/* =========================================
+   CELULAR PEQUEÑO
+========================================= */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .beneficios {
+        grid-template-columns: 1fr;
+    }
+
+    .beneficio {
+        border-right: none;
+        border-bottom: 1px solid #24211c;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 42px;
+    }
+
+}
